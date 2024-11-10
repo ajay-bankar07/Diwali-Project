@@ -1,0 +1,85 @@
+/* https://freecodez.com */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.diya {
+	width: 25vw;
+	min-width: 200px;
+}
+
+.diyas {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.diyas img {
+	width: 10vw;
+	min-width: 100px;
+}
+
+h1 {
+	position: relative;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 2.5em;
+	letter-spacing: 4px;
+	overflow: hidden;
+	background: linear-gradient(90deg, #000, #ff0000, #ff8400, #000);
+	background-repeat: no-repeat;
+	background-size: 150%;
+	animation: animate 10s linear infinite;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+	margin-top: 20px;
+}
+
+@keyframes animate {
+	0% {
+		background-position: 250%;
+	}
+
+	100% {
+		background-position: -250%;
+	}
+}
+
+.diyasx {
+	position: fixed;
+	top: -1vh;
+	font-size: 2rem;
+	transform: translateY(0);
+	animation: fall 3s linear forwards;
+	z-index: -1;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}
